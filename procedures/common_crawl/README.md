@@ -10,8 +10,3 @@ We linearized the remaining crawls using [Dolma](https://github.com/allenai/dolm
 
 This extracted 350 TB of linearized text.  
 
-
-
-
-
-
