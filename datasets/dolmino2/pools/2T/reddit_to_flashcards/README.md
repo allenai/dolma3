@@ -24,7 +24,7 @@ The specific criteria used to select the subreddits constitutes the primary diff
 
 Finally, the data from Step #2 was input to a synthetic rewriting pipeline to generate academic QA items with coverage of diverse question formats. 
 
-We defined 7 categories of question format inspired by variation observed in MMLU, and used these to construct prompts for QA text generation. The format categories are as follows:
+We defined 7 categories of question structure inspired by variation observed in MMLU, and used these to construct prompts for QA text generation. The structure categories are as follows:
 1. open-ended
 2. statement completion
 3. fill-in-the-blank
@@ -33,7 +33,7 @@ We defined 7 categories of question format inspired by variation observed in MML
 6. which-of-following-is-true
 7. in-question options
 
-For each format category we constructed a prompt for generating questions of that category given an input text. Within the templates we inserted texts drawn from the submission/comment data from Step #2. We iterated over the submission/comment pairs, and for each of these texts we sampled a format category. For longer input texts, format categories were resampled and prompted for again, a number of times proportional to the length of the text. These prompts were submitted to GPT-4o mini.
+For each structure category we constructed a prompt for generating questions of that category given an input text. Within the templates we inserted texts drawn from the submission/comment data from Step #2. We iterated over the submission/comment pairs, and for each of these texts we sampled a format category. For longer input texts, structure categories were resampled and prompted for again, a number of times proportional to the length of the text. These prompts were submitted to GPT-4o mini.
 
 ### 4. Postprocessing
 
