@@ -24,20 +24,11 @@ The specific criteria used to select the subreddits constitutes the primary diff
 
 Finally, the data from Step #2 was input to a synthetic rewriting pipeline to generate academic QA items with coverage of diverse question formats. 
 
-We defined 7 categories of question structure inspired by variation observed in MMLU, and used these to construct prompts for QA text generation. The structure categories are as follows:
-1. open-ended
-2. statement completion
-3. fill-in-the-blank
-4. statement truth verification
-5. which-of-following-has-property-X
-6. which-of-following-is-true
-7. in-question options
-
-For each structure category we constructed a prompt for generating questions of that category given an input text. Within the templates we inserted texts drawn from the submission/comment data from Step #2. We iterated over the submission/comment pairs, and for each of these texts we sampled a format category. For longer input texts, structure categories were resampled and prompted for again, a number of times proportional to the length of the text. These prompts were submitted to GPT-4o mini.
+We defined 7 categories of question structure inspired by variation observed in MMLU, and for each structure category we constructed a prompt template for generating questions of that category given an input text. Within the templates we then inserted texts drawn from the submission/comment data from Step #2. For each submission/comment text we sampled at least one format category to prompt for -- for longer input texts, structure categories were resampled and prompted for again, a number of times proportional to the length of the text. These prompts were submitted to GPT-4o mini.
 
 ### 4. Postprocessing
 
-GPT-4o mini outputs were parsed into separate QA items based on the "%%%%" separator. We retained all items containing the string "Answer: ".
+GPT-4o mini outputs were parsed into separate QA items based on the "%%%%" separator requested in the prompts. We kept all items containing the string "Answer: ".
 
 ---
 
