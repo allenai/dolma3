@@ -1,6 +1,6 @@
 ## Shared processing steps
 
-Both reddit_to_flashcards-high_relevance and reddit_to_flashcards-low_relevance have the following properties:
+Both **reddit_to_flashcards-high_relevance** and **reddit_to_flashcards-low_relevance** have the following properties:
 
 ### 1. Preliminary filtering
 
@@ -52,7 +52,7 @@ Below we list distinguishing features differing between reddit_to_flashcards-hig
 For the high_relevance set, subreddits were selected if they met the following criteria:
 - Subreddit has >= 20 unique retrieved items for queries within a given MMLU category; OR
 - Subreddit has >=100 retrieved items for queries across all MMLU categories.
-This yielded a list of 151 subreddits.
+This yielded a list of 151 subreddits, which can be found in `subreddits-high-relevance.txt`.
 
 #### Prompts
 
@@ -83,7 +83,7 @@ For this set, after generation was complete 50% of items were prepended with the
 For the low_relevance set, we included subreddits based on the following criterion:
 - Subreddit has >= 5 retrieved items for for queries within a given MMLU category (in this case the criterion does not require *unique* items, such that the criterion can be met by the same item being retrieved 5 times for different queries within a category)
 
-This yields a set of 885 subreddits, and we took the 734 subreddits that were selected based on this threshold and not included in the 151 subreddits selected for the high_relevance set.
+This yields a set of 885 subreddits, and we took the 734 subreddits that were selected based on this threshold and not included in the 151 subreddits selected for the high_relevance set. The resulting list can be found in `subreddits-low-relevance.txt`.
 
 #### Prompts
 
