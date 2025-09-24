@@ -2,7 +2,7 @@
 
 This folder contains supplementary documentation of the sources **reddit_to_flashcards-high_relevance** and **reddit_to_flashcards-low_relevance**. 
 
-These datasets are very similar in their creation, differing primarily in that a) they draw on content from different subreddits, and b) they use slightly different formatting in the few-shot examples used for prompting for synthetic data generation. We provide the subreddit lists and prompt templates as follows:
+These datasets are very similar in their creation, differing primarily in that a) they draw on content from different subreddits, and b) they use slightly different formatting in the few-shot examples when prompting for synthetic data generation. We provide the subreddit lists and prompt templates as given below:
 
 1. **reddit_to_flashcards-high_relevance**
    - `subreddits-high-relevance.txt`
@@ -11,7 +11,7 @@ These datasets are very similar in their creation, differing primarily in that a
    - `subreddits-low-relevance.txt`
    - `prompts-low-relevance.py`
 
-In the following sections we provide additional methodological detail, first covering the shared processing steps involved in creation of both of these datasets, before outlining the specific properties in which they differ.
+In the following sections we provide additional methodological detail, first covering the shared processing steps involved in creation of both of these datasets, and then outlining the distinguishing features.
 
 ## Shared processing steps
 
