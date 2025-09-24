@@ -47,9 +47,9 @@ GPT-4o mini outputs were parsed into separate QA items based on the "%%%%" separ
 
 ## Distinguishing features
 
-Below we list distinguishing features differing between reddit_to_flashcards-high_relevance and reddit_to_flashcards-low_relevance.
+Below we list distinguishing features differing between **reddit_to_flashcards-high_relevance** and **reddit_to_flashcards-low_relevance**.
 
-### high_relevance 
+### 1. reddit_to_flashcards-high_relevance 
 
 #### Subreddit selection criteria
 
@@ -81,7 +81,7 @@ distribution = [
 
 For this set, after generation was complete 50% of items were prepended with the prefix "Question: ".
 
-### low_relevance
+### 2. reddit_to_flashcards-low_relevance
 
 #### Subreddit selection criteria
 
