@@ -23,7 +23,7 @@ def add_two_numbers(a: int, b: int) -> int:
     return sum
 ```
 
-And after transformation with prefix-suffix-middle arrangement, it would look like:
+The transformed version with prefix-suffix-middle arrangement would look like:
 ```python
 <|fim_prefix>def add_two_numbers(a: int, b: int) -> int:
 <|fim_suffix|>
