@@ -45,8 +45,6 @@ We defined 7 categories of question structure inspired by variation observed in 
 
 GPT-4o mini outputs were parsed into separate QA items based on the "%%%%" separator requested in the prompts. We kept all items containing the string "Answer: ".
 
----
-
 ## Distinguishing features
 
 Below we list distinguishing features differing between reddit_to_flashcards-high_relevance and reddit_to_flashcards-low_relevance.
