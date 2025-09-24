@@ -1,3 +1,13 @@
+## Overview
+
+This folder contains supplementary documentation of the following sources:
+- **reddit_to_flashcards-high_relevance**
+- **reddit_to_flashcards-low_relevance**
+
+These datasets are very similar in their creation, differing primarily in that a) they draw on content from different subreddits, and b) they use slightly different formatting in few-shot examples used for prompting for synthetic data generation.
+
+We first cover the shared processing steps involved in creation of both of these datasets, before outlining the specific properties in which they differ.
+
 ## Shared processing steps
 
 Both **reddit_to_flashcards-high_relevance** and **reddit_to_flashcards-low_relevance** have the following properties:
