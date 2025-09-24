@@ -17,21 +17,6 @@ Answer: B
 Separate ALL questions with "\n%%%%\n".
 """
 
-OPEN_ENDED_NON_MC ="""I will ask you to convert a text into questions and answers. Here is the text:
-
-"{text}"
-
-Instructions: Convert the information in the text into academic questions and answers. ONLY include questions and answers that are academic. DONOT reference the text in the question.{extra}
-
-For format, use questions that are open-ended. Example:
-
-Question: How many legs do dogs have?
-
-Answer: 4
-
-Separate ALL questions with "\n%%%%\n".
-"""
-
 STATEMENT_COMPLETION ="""I will ask you to convert a text into multiple-choice questions. Here is the text:
 
 "{text}"
