@@ -1,8 +1,11 @@
 ## Overview
 
 This folder contains supplementary documentation of the following sources:
-- **reddit_to_flashcards-high_relevance**
-- **reddit_to_flashcards-low_relevance**
+
+1. Source: **reddit_to_flashcards-high_relevance**
+   - reddit
+3. Source: **reddit_to_flashcards-low_relevance**
+   - reddit
 
 These datasets are very similar in their creation, differing primarily in that a) they draw on content from different subreddits, and b) they use slightly different formatting in few-shot examples used for prompting for synthetic data generation.
 
