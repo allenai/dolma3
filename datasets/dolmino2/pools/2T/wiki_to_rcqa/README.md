@@ -35,25 +35,15 @@ distribution = [
     ]
 ```
 
-Each template contains a slot to request a specific number *n* of questions. We select this value from the range [1,8] with a sampling function sensitive to passage length, as follows:
+Each template contains a slot to request a specific number *n* of questions. We select this value from the range [1,8] with a sampling function sensitive to passage length in words, as in the code snippet below:
 
-Let 
+```
+qnum_prop = round(len(passage.split())/40)
+if qnum_prop < 2:
+    qnum = 1
+else:
+    qnum = max(1,min(8,random.choices(range(qnum_prop-4,qnum_prop))[0]))
+```
 
-- *w* = number of words in the passage
-- *p* = proportional number of questions (rounded)
-- *q* = final number of questions
 
-We compute:
 
-  {
-  |  1,   if qp < 2 
-  |  max(1, min(8, X)), if qnum_prop ≥ 2 
-  }
-
-Then
-  q = \begin{cases} 1, & \text{if } q_p < 2 \\ \max\left(1, \min\left(8, R\right)\right), & \text{if } q_p \geq 2 \end{cases}
-
-Where:
-  R \sim \text{Uniform}(q_p - 4, q_p - 1)
-
-We then insert into the template *<q> questions* if q > 1, and *1 question* if q is equal to 1.
