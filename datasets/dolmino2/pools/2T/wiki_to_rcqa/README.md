@@ -44,7 +44,11 @@ Let
 - *q* = final number of questions
 
 We compute:
-  q_p = \left\lfloor \frac{w}{40} + 0.5 \right\rfloor
+
+  {
+  |  1,   if qp < 2 
+  |  max(1, min(8, X)), if qnum_prop ≥ 2 
+  }
 
 Then
   q = \begin{cases} 1, & \text{if } q_p < 2 \\ \max\left(1, \min\left(8, R\right)\right), & \text{if } q_p \geq 2 \end{cases}
