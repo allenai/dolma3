@@ -2,7 +2,7 @@
 
 This folder contains supplementary documentation of the sources **reddit_to_flashcards-high_relevance** and **reddit_to_flashcards-low_relevance**. 
 
-These datasets are very similar in their creation, differing primarily in that a) they draw on content from different subreddits, b) they use slightly different formatting in the few-shot examples when prompting for synthetic data generation, c) they use a slightly revised sampling distribution. We provide the subreddit lists and prompt templates as given below:
+These datasets are very similar in their creation, differing primarily in that a) they draw on content from different subreddits, b) they use slightly different formatting in the few-shot examples when prompting for synthetic data generation, c) they use slightly different sampling distributions for question structures. Sampling distributions are outlined below, and we provide full subreddit lists and prompt templates in supplementary files as follows:
 
 1. **reddit_to_flashcards-high_relevance**
    - `subreddits-high-relevance.txt`
