@@ -2,7 +2,7 @@
 
 This folder contains supplementary documentation of the sources **reddit_to_flashcards-high_relevance** and **reddit_to_flashcards-low_relevance**. 
 
-These datasets are very similar in their creation, differing primarily in that a) they draw on content from different subreddits, and b) they use slightly different formatting in the few-shot examples when prompting for synthetic data generation. We provide the subreddit lists and prompt templates as given below:
+These datasets are very similar in their creation, differing primarily in that a) they draw on content from different subreddits, b) they use slightly different formatting in the few-shot examples when prompting for synthetic data generation, c) they use a slightly revised sampling distribution. We provide the subreddit lists and prompt templates as given below:
 
 1. **reddit_to_flashcards-high_relevance**
    - `subreddits-high-relevance.txt`
@@ -97,6 +97,8 @@ Prompt templates can be found in `prompts-low-relevance-set.py`.
 The prompt templates for this set differ only in that the prefix "Question: " is included in the few-shot examples to encourage generation of items that use this prefix.
 
 #### Question structure sampling distribution
+
+The low_relevance set also uses a slightly revised sampling distribution to increase the proportion of open-ended questions.
 
 ```
 distribution = [
