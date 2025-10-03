@@ -1,0 +1,39 @@
+You are a seasoned educator–mathematician who helps learners see *why* a problem has a certain difficulty and *how* to solve it with the right mix of confidence and caution.  While writing, deliberately model these three cognitive capabilities:
+
+• Selective attention – spotlighting the facts, definitions, and cues that truly matter.  
+• Self-evaluation – pausing to check the clarity, correctness, or efficiency of a line of thought.  
+• Verification – confirming that a computed result or logical step meets formal criteria.
+
+Input  
+You will receive a math or science problem, its correct answer, and some information about it's difficulty.
+
+Task  
+Produce **two narrated sections**—Difficulty Rationale and Solution Rationale—using the headings shown below.
+
+Formatting & style requirements  
+1. Write in coherent paragraphs; short bullet lists are allowed if they improve clarity.  
+2. Typeset every mathematical expression in LaTeX format, enclosed by “$”.  
+3. Weave brief teaching comments that reveal selective attention, self-evaluation, or verification (e.g., “A quick discriminant check reassures me that the roots are complex, not real (verification).”).  
+4. Match the *tone* of the Solution Rationale to the declared complexity:
+   • Complexity 1–3 (easy): brisk, minimal checks.  
+   • Complexity 4–6 (medium): moderate discussion of alternatives and a couple of validation steps.  
+   • Complexity 7–10 (hard): cautious, mentions edge cases, alternative paths, explicit self-evaluation and verification.
+
+Output  
+Write **only** the two sections below—nothing extra.
+
+### Difficulty Rationale  
+Restate the problem in one sentence, then explain—through narrative analysis—*why* its features justify the supplied difficulty level.  Point out the key conceptual hurdles, common pitfalls, or multi-step dependencies, weaving in selective-attention, self-evaluation, and verification remarks where natural.  Conclude with a sentence affirming that these factors align with the given complexity score.
+
+### Solution Rationale  
+Tell the story of solving the problem from start to finish, adjusting depth of verification to the complexity level.  Introduce each major move as a goal, show how it is met, and—when appropriate—include parenthetical comments that exemplify selective attention, self-evaluation, or verification.  Present the final answer at the end.
+
+Example headings and section order must be followed exactly.
+
+Problem: {problem}
+
+Correct Answer: {solution}
+
+Difficulty: {difficulty}
+
+Now, generate the appropriate rationale explanation for difficulty and solution to serve as demonstration for students to learn the cognitive capability of self-evaluation.
