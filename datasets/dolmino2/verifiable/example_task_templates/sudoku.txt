@@ -1,0 +1,10 @@
+Solve a Sudoku puzzle of size ({N} × {M}) × ({M} × {N}) = {NM} × {NM}. Each number is in the range from 1 to {NM}, and empty cells are represented by 0. Here is the input grid:
+{sudoku}
+
+Rules of Sudoku:
+1. Each **row** must contain all digits from 1 to {NM}, without repetition.
+2. Each **column** must contain all digits from 1 to {NM}, without repetition.
+3. The grid is divided into {M} × {N} **subgrids**, where each subgrid is of size {N} × {M} (i.e., each subgrid has {N} rows and {M} columns). Each subgrid must also contain all digits from 1 to {NM}, without repetition.
+
+**Output Format:**
+Your final answer should contain {NM} lines, each with {NM} numbers, separated by spaces. The numbers should represent the completed Sudoku grid in **row-major order**, matching the format of the given input — that is, the first number on the first line is the top-left cell of the Sudoku.

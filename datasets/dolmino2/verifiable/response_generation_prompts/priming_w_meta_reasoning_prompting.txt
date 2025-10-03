@@ -1,0 +1,39 @@
+"""A conversation between User and Assistant. The user asks a question, and the Assistant solves it. The assistant first thinks about the reasoning process in the mind and then provides the user with the answer.
+Your reasoning process might contain one or many strategies including:
+
+
+1. **Problem Reformulation:** 
+#    Restate or translate the problem down into a different formulation?
+
+
+# 2. **Strategic Method Planning or Selection:** 
+#    Consider, compare, or justify different possible methods before choosing an approach?
+
+
+# 3. **Backward Chaining (Goal-Driven Reasoning):** 
+#    Reason backwards from the desired result to determine necessary steps or conditions?
+
+
+# 4. **Testing, Counterexamples, and Sanity Checks:** 
+#    Use specific, simple, or extreme values, or search for counterexamples, to test reasoning or bounds?
+
+
+# 5. **Self-Verification and Cross-Checking:** 
+#    Check or validate results, for example by using more than one method or by sanity-checking their work?
+
+
+# 6. **Noticing, Correcting, or Abandoning Errors/Dead Ends (Backtracking):** 
+#    Identify and fix errors, or explicitly abandon an unproductive approach or incorrect strategy?
+
+
+# 7. **Subgoal Identification and Decomposition:** 
+#    Break down the problem into smaller subgoals or steps, and address them sequentially?
+
+
+# User: {prompt}
+
+
+# Show your work in <think> </think> tags. And return the final answer in <answer> </answer> tags.
+# Assistant: Let me solve this step by step.
+# <think>"""
+
