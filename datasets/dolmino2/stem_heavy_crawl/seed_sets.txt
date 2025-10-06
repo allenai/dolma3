@@ -220,4 +220,4 @@ MMLU Max Sources:
     www.physicsforums.com
     mathhelpforum.com
 
-[All Domains in Datacomp LM Baseline dataset]
+Note: All domains in the DataComp-LM Baseline dataset were also seeded. The Baseline dataset is accessible here: https://data.commoncrawl.org/contrib/datacomp/DCLM-baseline/index.html

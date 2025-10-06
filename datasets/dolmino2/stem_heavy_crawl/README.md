@@ -10,7 +10,7 @@ The crawler ingested various scientific, educational, and general domains based 
 
 ##'Code Prose' Evaluation
 
-A code prose [FastText](https://fasttext.cc/docs/en/supervised-tutorial.html) classifier  was used to identify document spans as code, prose, or other. Based on these evaluations, we determined if a document met two sets of conditions:
+A code prose [FastText](https://fasttext.cc/docs/en/supervised-tutorial.html) classifier  was used to identify document spans as code, prose, or other.
 
 Code Prose:
 
@@ -25,8 +25,7 @@ Code:
 	code_count >= 20
 	code_mean_entropy < 0.4
 
-A domain's crawl priority was increased in proportion to the amount of 'code' and 'code prose' documents crawled so far from that domain. 
-
+As new documents were crawled, the proportion of documents from each domain meeting either criteria was continously tracked, and crawling was prioritized for domains with higher proportions.
 
 ##Data Processing
 
