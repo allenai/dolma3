@@ -1,6 +1,6 @@
 # STEM Heavy Crawl 
 
-##Data Discovery
+## Data Discovery
 The 'STEM Heavy Crawl' data was crawled between 9/12/2024-6/3/2025 by the Ai2 pipeline. The crawler followed good crawler practices (disclosed agent, no paywall circumventing, etc) and made requests with the Ai2 User-Agent header:
 
 	Mozilla/5.0 (compatible) AI2Bot (+https://www.allenai.org/crawler) 
@@ -27,7 +27,7 @@ Code:
 
 As new documents were crawled, the proportion of documents from each domain meeting either criteria was continously tracked, and crawling was prioritized for domains with higher proportions.
 
-##Data Processing
+## Data Processing
 
 Plain text data crawled from the seeded domains was stored as WARC files and then linearized using [Resiliparse](https://resiliparse.chatnoir.eu/en/stable/man/extract/html2text.html#basic-plain-text-conversion) via [Dolma](https://github.com/allenai/dolma/blob/45482814db21e79df9fa7b6ee7f1270839976472/python/dolma/warc/processor.py). 
 
