@@ -12,19 +12,17 @@ Below we elaborate on the data creation process.
 
 ### 1. Wikipedia passage extraction
 
-We performed initial preprocessing to clean the Wikipedia data and format into summaries and sections. The script used for this preprocessing is provided at `scripts/wikiclean.py`. Example usage is below. 
+We performed initial preprocessing to clean the Wikipedia data and format into summaries and sections. The script used for this initial preprocessing (which assumes input data format as produced via the [Wikipedia preparation found here](https://github.com/allenai/dolma/blob/main/docs/getting-started.md)) is provided at `scripts/wikiclean.py`. Example usage for `wikiclean.py` is below: 
 
 ```
 uv run scripts/wikiclean.py --documents <wikipedia_input_dir> --destination <output_dir> --processes <num_processes>
 ```
 
-This script assumes data as produced by the Wikipedia preparation [script found here](https://github.com/allenai/dolma/blob/main/docs/getting-started.md). 
-
-The outputs of this processing were then subjected to further segmentation to control passage length. Segmentation was executed according to the following constraints:
+The outputs of this preprocessing were then subjected to further segmentation to control passage length. Segmentation was executed according to the following constraints:
 
 - if section is less than 300 words, include as single passage
-- if section is >= 300 words, split into paragraphs and include paragraphs as passages
-- omit passages < 20 words
+- if section is >= 300 words, split into paragraphs (splitting on single newline) and include paragraphs as passages
+- omit passages that are < 20 words
 
 ### 2. QA generation prompting
 
