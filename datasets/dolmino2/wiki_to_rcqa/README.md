@@ -12,7 +12,13 @@ Below we elaborate on the data creation process.
 
 ### 1. Wikipedia passage extraction
 
-Initial Wikipedia preprocessing used [wikiclean.py](https://github.com/allenai/dolma/blob/soldni/wpp/contrib/wikiclean/wikiclean.py). This script aims to identify Wikipedia sections.
+We performed initial preprocessing to clean the Wikipedia data and format into summaries and sections. The script used for this preprocessing is provided at `scripts/wikiclean.py`. Example usage is below. 
+
+```
+uv run scripts/wikiclean.py --documents <wikipedia_input_dir> --destination <output_dir> --processes <num_processes>
+```
+
+This script assumes data as produced by the Wikipedia preparation [script found here](https://github.com/allenai/dolma/blob/main/docs/getting-started.md). 
 
 The outputs of this processing were then subjected to further segmentation to control passage length. Segmentation was executed according to the following constraints:
 
