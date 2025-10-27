@@ -1,4 +1,4 @@
-############ Solution Distill Rewrites ############
+############ Verbosity-reducing Rewrites ############
 
 FULL_THOUGHTS_PROMPT = """I will provide a math problem and a long solution that arrives at the correct answer. Please write a cleaned version preserving ALL reasoning, explanations, and thoughts present in the draft.
 
@@ -97,3 +97,4 @@ STUDENT_STUDENT_ERROR_CORRECT = """Convert the context above as a multi-turn dis
 Additional instructions:
 -- The last dialogue turn should be the student giving the final answer in \\boxed format.
 -- All math should be in LaTeX format."""
+
