@@ -31,7 +31,7 @@ In order from "most faithful to original trace" to "most distilled", we consider
 
 1. **Fullthoughts**: Only edit traces for improved clarity or flow (e.g., edit instances with a single token repeated over and over), keeping all reasoning paths contained in the original trace.
 
-2. **Emphasize meta-reasoning**: Rewrite the trace to highlight specific desireable meta-reasoning strategies (error correction, self-verification, planning, etc.).
+2. **Emphasize meta-reasoning**: Rewrite the trace to highlight specific desirable meta-reasoning strategies (error correction, self-verification, planning, etc.).
 
 3. **Sleek**: Rewrite the trace to only include the key solution steps, removing the dead-end explorations and solution-irrelevant attempts.
 
