@@ -39,6 +39,6 @@ In order from "most faithful to original trace" to "most distilled", we consider
 
 1. **Student-Teacher Lecture**: Convert trace into a student-teacher dialogue in which the teacher first gives an explanation of all relevant math concepts. Aimed to inject further information into the trace.
 2. **Student-Teacher Planning**: Convert trace into a student-teacher dialogue in which a teacher guides a student in planning their steps to solve the problem. Aimed to emphasize the meta-reasoning capability of planning.
-3. **Student Teacher Reformulation**: Convert trace into a student-teacher dialogue where a teacher guides a student in reformulating the problem into a more solveable form. Aimed to emphasize the meta-reasoning capability of reformulation.
+3. **Student-Teacher Reformulation**: Convert trace into a student-teacher dialogue in which a teacher guides a student in reformulating the problem into a more solvable form. Aimed to emphasize the meta-reasoning capability of reformulation.
 4. **Student-Student Error Correction**: Convert trace into a dialogue between two students working together to solve the problem, in which each student identifies the errors of the other and prompts them to correct it. Aimed to emphasize the meta-reasoning capability of error correction.
 
