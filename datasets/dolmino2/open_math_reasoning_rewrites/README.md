@@ -33,7 +33,7 @@ In order from "most faithful to original trace" to "most distilled", we consider
 
 2. **Emphasize meta-reasoning**: Rewrite the trace to highlight specific desirable meta-reasoning strategies (error correction, self-verification, planning, etc.).
 
-3. **Sleek**: Rewrite the trace to only include the key solution steps, removing the dead-end explorations and solution-irrelevant attempts.
+3. **Sleek**: Rewrite the trace to include only the key solution steps, removing dead-end explorations and solution-irrelevant attempts.
 
 ### Synthetic dialogue rewrites
 
