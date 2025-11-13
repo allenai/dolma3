@@ -8,6 +8,13 @@
 # ]
 # ///
 
+"""
+This script does basic preprocessing to clean Wikipedia data and format into summaries and sections. Assumes input data fornatted via the Wikipedia preparation found here: https://github.com/allenai/dolma/blob/main/docs/getting-started.md
+
+Author: Luca Soldaini
+Usage: uv run scripts/wikiclean.py --documents <wikipedia_input_dir> --destination <output_dir> --processes <num_processes>
+"""
+
 from typing import NamedTuple
 from dolma.core import data_types  # import DocResult, Document, Span
 from dolma import add_tagger, BaseTagger
