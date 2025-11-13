@@ -5,6 +5,7 @@ This folder contains supplementary documentation of **wiki-to-rcqa**. This datas
 Supplementary files in this folder:
 
 - Prompt templates for synthetic QA pair generation: `prompts-wiki-to-rcqa-py`
+- Wikipedia preprocessing script: `scripts/wikiclean.py`
 
 Below we elaborate on the data creation process.
 
