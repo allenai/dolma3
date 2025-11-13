@@ -47,7 +47,7 @@ length_scaler = round(len(passage.split())/40)
 if length_scaler < 2:
     num_questions = 1
 else:
-    num_questions = max(1,min(8,random.choices(range(length_scaler-4,length_scaler))[0]))
+    num_questions = max(1, min(8, random.choices(range(length_scaler - 4, length_scaler))[0]))
 ```
 
 
