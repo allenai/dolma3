@@ -43,7 +43,7 @@ distribution = [
 Each template contains a slot to request a specific number *n* of questions. We select this value from the range [1,8] with a sampling function sensitive to passage length in words, as in the code snippet below:
 
 ```
-length_scaler = round(len(passage.split())/40)
+length_scaler = round(len(passage.split()) / 40)
 if length_scaler < 2:
     num_questions = 1
 else:
