@@ -1,7 +1,7 @@
 # /// script
 # requires-python = ">=3.10"
 # dependencies = [
-#   "ai2-olmo-core==1.4.0",
+#   "ai2-olmo-core[beaker] @ git+https://github.com/allenai/olmo-core.git@main",
 # ]
 # ///
 
