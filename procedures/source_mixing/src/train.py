@@ -45,7 +45,7 @@ def build_experiment_config(cli_context: CliContext) -> ExperimentConfig:
     )
 
     tokenizer_config = TokenizerConfig.dolma2()
-    model_config = TransformerConfig.olmo2_30m(
+    model_config = TransformerConfig.olmo2_30M(
         vocab_size=tokenizer_config.padded_vocab_size()
     )
 
