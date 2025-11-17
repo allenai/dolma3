@@ -1,6 +1,6 @@
-## Common Crawl Ingestion
+## Ingestion
 
-Our Common Crawl data consists of the warc files of 104 crawls from CC-MAIN-2013-20 to C-MAIN-2024-51 accessible at s3://commoncrawl/crawl-data.
+Our ingested web text consists of the warc files of 104 crawls from CC-MAIN-2013-20 to CC-MAIN-2024-51 accessible at s3://commoncrawl/crawl-data.
 
 In its raw form, this dataset is 6.2 PB. However, roughly 94% of this text is HTML artifacts, so we relied on [resiliparse](https://resiliparse.chatnoir.eu/en/latest/man/extract/html2text.html#basic-plain-text-conversion) to extract the plain text with semantic value present in each page.
 
