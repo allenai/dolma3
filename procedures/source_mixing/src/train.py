@@ -56,7 +56,7 @@ def build_experiment_config(cli_context: CliContext) -> ExperimentConfig:
         scheduler=CosWithWarmupAndLinearDecay(t_max=MAX_TOKENS, warmup_steps=100),
     )
 
-    source_list = SourceMixtureList.from_yaml("sources.yaml")
+    source_list = SourceMixtureList.from_yaml("./sources.yaml")
     source_list.validate()
     dataset_config = NumpyFSLDatasetConfig.from_src_mix(
         src_mix=SourceMixtureDatasetConfig(
