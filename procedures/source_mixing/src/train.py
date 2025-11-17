@@ -18,6 +18,7 @@ from olmo_core.nn.transformer import TransformerConfig
 from olmo_core.optim.scheduler import CosWithWarmupAndLinearDecay
 from olmo_core.train import Duration
 from olmo_core.train.train_module import TransformerTrainModuleConfig
+import os
 
 SEQ_LENGTH = 2048
 GLOBAL_BATCH_SIZE = 131_072
@@ -56,7 +57,9 @@ def build_experiment_config(cli_context: CliContext) -> ExperimentConfig:
         scheduler=CosWithWarmupAndLinearDecay(t_max=MAX_TOKENS, warmup_steps=100),
     )
 
-    source_list = SourceMixtureList.from_yaml("./sources.yaml")
+    source_list = SourceMixtureList.from_yaml(
+        os.path.join(os.path.dirname(__file__), "sources.yaml")
+    )
     source_list.validate()
     dataset_config = NumpyFSLDatasetConfig.from_src_mix(
         src_mix=SourceMixtureDatasetConfig(
