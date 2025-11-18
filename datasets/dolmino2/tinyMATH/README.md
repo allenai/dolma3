@@ -3,10 +3,11 @@
 This outlines the steps taken to create the TinyMATH PoT and TinyMATH MIND datasets. Broadly speaking, TinyMATH is a collection of synthetic high-school level mathematics problems, in the spirit of tinyGSM.
 
 ## Overview
-For the TinyMATH datasets we generate new math problems, code to solve them, and two forms of natural language discussion of each solution. Only the python solutions and natural language solutions are used during training, but we outline the full recipe in three steps:
+For the TinyMATH datasets we generate new math problems, code to solve them, and two forms of natural language discussion of each solution.  Generation of this data proceeds in three steps:
 1. **Problem Generation**: Generate 100 synthetic math problems from each problem in the MATH training dataset
 2. **Code Generation**: Convert new problems to python solutions (PoT)
 3. **Conversational Transformation**: Convert python solutions to natural language discussions
+While generating new problems is a critical step in this pipeline, we only include the generated solutions, both in code and conversational formats, in our training data.
 
 ## Source Materials
 
@@ -70,7 +71,7 @@ The original problem:
 **Output**: 729,261 python solutions (1 per problem, minus some failures in generation)
 
 ## Stage 3: Conversational Transformation
-From prior experiments, and corroborated by the MIND paper itself, we rewrote each python problem using the "Problem Solving" and "Two Students" MIND prompts. Rewiters were performed using the Azure API and OpenAI models as follows:
+The [MIND paper](https://arxiv.org/pdf/2410.12881) proposes 8 templates for rewriting math problems into conversational english. However they demonstrate that two rewrite-templates: the "Two Students" and "Problem Solving" templates, demonstrate superior performance. This finding was corroborated in [OLMo2](https://arxiv.org/abs/2501.00656) in the TinyGSM dataset. Hence, for TinyMATH, we only rewrite the PoT data using these two templates.
 
 **Model**: `gpt-4.1-2025-04-14`
 
