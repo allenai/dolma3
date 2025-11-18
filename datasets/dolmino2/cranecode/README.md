@@ -15,7 +15,7 @@ There are many steps to reproduce SwallowCode:
 
 
 ## Recipe
-We start with just the python subset of The-Stack-v2-smol. The first step is to check if each python string passes the python `compile` command, and if so, we use pylint to score the code. We apply a comment penalty similar to SwallowCode and then keep only documents with a score of at least 7.0. This yields a dataset of 20,424,729 documents.
+We start with the python subset of The-Stack-v2-smol. The first step is to check whether each python string passes the python `compile` command, and if so, we use pylint to score the code. We apply the comment penalty from SwallowCode and then follow their procedure in keeping only documents with a score of at least 7.0. This yields a dataset of 20,424,729 documents.
 
 Then we rewrite in order to obtain python code conforming to style guidelines. Following SwallowCode, we rewrite each example by prepending a system message containing the prompt:
 ```
