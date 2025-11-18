@@ -1,4 +1,4 @@
-OPEN_ENDED ="""I will ask you to convert a text into multiple-choice questions. Here is the text:
+OPEN_ENDED = """I will ask you to convert a text into multiple-choice questions. Here is the text:
 
 "{text}"
 
@@ -17,7 +17,7 @@ Answer: B
 Separate ALL questions with "\n%%%%\n".
 """
 
-STATEMENT_COMPLETION ="""I will ask you to convert a text into multiple-choice questions. Here is the text:
+STATEMENT_COMPLETION = """I will ask you to convert a text into multiple-choice questions. Here is the text:
 
 "{text}"
 
@@ -36,7 +36,7 @@ Answer: C
 Separate ALL questions with "\n%%%%\n".
 """
 
-FILL_IN_BLANK ="""I will ask you to convert a text into multiple-choice questions. Here is the text:
+FILL_IN_BLANK = """I will ask you to convert a text into multiple-choice questions. Here is the text:
 
 "{text}"
 
@@ -55,7 +55,7 @@ Answer: B
 Separate ALL questions with "\n%%%%\n".
 """
 
-TWO_STATEMENT ="""I will ask you to convert a text into multiple-choice questions. Here is the text:
+TWO_STATEMENT = """I will ask you to convert a text into multiple-choice questions. Here is the text:
 
 "{text}"
 
@@ -96,7 +96,7 @@ Answer: A
 Separate ALL questions with "\n%%%%\n".
 """
 
-WHICH_HAS_PROPERTY ="""I will ask you to convert a text into multiple-choice questions. Here is the text:
+WHICH_HAS_PROPERTY = """I will ask you to convert a text into multiple-choice questions. Here is the text:
 
 "{text}"
 
@@ -125,7 +125,7 @@ Answer: B
 Separate ALL questions with "\n%%%%\n".
 """
 
-WHICH_TRUE ="""I will ask you to convert a text into multiple-choice questions. Here is the text:
+WHICH_TRUE = """I will ask you to convert a text into multiple-choice questions. Here is the text:
 
 "{text}"
 
@@ -154,7 +154,7 @@ Answer: A
 Separate ALL questions with "\n%%%%\n".
 """
 
-IN_QUESTION_OPTIONS ="""I will ask you to convert a text into multiple-choice questions. Here is the text:
+IN_QUESTION_OPTIONS = """I will ask you to convert a text into multiple-choice questions. Here is the text:
 
 "{text}"
 
