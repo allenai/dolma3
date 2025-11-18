@@ -1,9 +1,9 @@
 # SwallowMatt Data
 
-This outlines the steps taken to create the SwallowMatt dataset. This can be thought of as a more permissively licensed variation on the [SwallowMath dataset](https://huggingface.co/datasets/tokyotech-llm/swallow-math) from the `tokyotoch-llm` team. SwallowMath leveraged Llama-3.3-70B-Instruct to generate data, which has a less permissive license. By contrast, we used Qwen3-32B.
+This outlines the steps taken to create the CraneMath dataset. CraneMath can be thought of as a more permissively licensed variation on the [CraneMath dataset](https://huggingface.co/datasets/tokyotech-llm/swallow-math) from the `tokyotoch-llm` team. CraneMath leveraged Llama-3.3-70B-Instruct to generate data, which has a less permissive license. By contrast, for CraneMath we used Qwen3-32B for all data generation.
 
 ## Overview
-This is a simple one-step rewrite of an existing permissively licensed dataset: we simply use Qwen3 to rewrite Finemath-4plus.
+Creation of CraneMath involved a simple one-step rewrite of an existing permissively licensed dataset: we simply use Qwen3 to rewrite Finemath-4plus with the prompt used for creating SwallowMath.
 
 ## Source Materials
 
@@ -12,7 +12,7 @@ This is a simple one-step rewrite of an existing permissively licensed dataset: 
 
 
 ## Recipe
-Starting with Finemath-4plus, for each example, we use Qwen3-32B to rewrite the example by prepending with a system message containing the prompt:
+Starting with Finemath-4plus, for each example, we use Qwen3-32B to rewrite the example by prepending a system message containing the prompt:
 ```
 You are an intelligent math tutor. You are given the following math problem and answer with some unnecessary parts. Please remove the unneeded parts of the questions. For example, the date of the question submitted, the answer date, the privacy policy, the footer, the header, etc, should be removed. However, please keep the main question and answer.\nIf questions or answers lack some information or are not elaborate, please make them more informative and easy to understand. If needed, please add more detail about the step-by-step calculation process.\n\nHere is the example:
 ```
