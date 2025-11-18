@@ -11,10 +11,10 @@ Creation of MegaMatt involves a simple one-step rewrite of an existing permissiv
 
 
 ## Recipe
-We first collect data from [Megamath-Web-Pro](https://huggingface.co/datasets/LLM360/MegaMath) and then filter down to only collect documents that were taken from Commoncrawl dumps CC-MAIN-2023-23 and later. This preserves 7,216,941 documents needing refinement. Then we use Qwen3-32B and the following prompt to refine them:
+We first collect data from [Megamath-Web-Pro](https://huggingface.co/datasets/LLM360/MegaMath) and then filter down to only collect documents that were taken from Commoncrawl dumps CC-MAIN-2023-23 and contain a `math_score` of at least 0.4. This preserves 7,216,941 documents needing refinement. Then we use Qwen3-32B and the following prompt to refine them:
 ```
 Task:\n- Carefully analyze the provided text to extract key facts, concrete details, important numbers,\nand core concepts.\n- Remove any irrelevant or noisy information, and reorganize the content into a logically structured,\ninformation-dense, and concise version that is easy to learn from. Output only the refined text.\n- Strive to maintain the original length as much as possible (avoid excessive shortening).\n- Refine multiple choice questions and answers if any.\nText:\n
 ```
 
 ## Final Dataset:
-Ultimately this yields 6,794,731 refined documents that (one for each of the Megamath-Web-Pro) 3.884B tokens.
+Ultimately this yields 6,794,731 refined documents (one for each of the selected Megamath-Web-Pro documents, minus some generation failures), for a total of 3.884B tokens.
