@@ -26,7 +26,6 @@ SEED = 1337
 
 
 def build_experiment_config(cli_context: CliContext) -> ExperimentConfig:
-    print(cli_context)
     run_name_with_ts = f"{cli_context.run_name}-{datetime.now().astimezone().strftime('%Y%m%dT%H%M%S%z')}"
     root_dir = get_root_dir(cli_context.cluster)
     work_dir = get_work_dir(root_dir)
