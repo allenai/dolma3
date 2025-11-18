@@ -1,4 +1,4 @@
-# SwallowMatt Data
+# CraneMath Data
 
 This outlines the steps taken to create the CraneMath dataset. CraneMath can be thought of as a more permissively licensed variation on the [CraneMath dataset](https://huggingface.co/datasets/tokyotech-llm/swallow-math) from the `tokyotoch-llm` team. CraneMath leveraged Llama-3.3-70B-Instruct to generate data, which has a less permissive license. By contrast, for CraneMath we used Qwen3-32B for all data generation.
 
