@@ -6,14 +6,12 @@
 # ///
 
 from datetime import datetime
-from typing import Optional
 
 from olmo_core.data import NumpyDataLoaderConfig, NumpyFSLDatasetConfig, TokenizerConfig
 from olmo_core.data.source_mixture import SourceMixtureDatasetConfig, SourceMixtureList
 from olmo_core.internal import cookbook
-from olmo_core.internal.common import build_launch_config, get_root_dir, get_work_dir
+from olmo_core.internal.common import get_root_dir, get_work_dir
 from olmo_core.internal.experiment import CliContext, ExperimentConfig, main
-from olmo_core.launch.beaker import BeakerLaunchConfig
 from olmo_core.nn.transformer import TransformerConfig
 from olmo_core.optim.scheduler import CosWithWarmupAndLinearDecay
 from olmo_core.train import Duration
@@ -28,22 +26,11 @@ SEED = 1337
 
 
 def build_experiment_config(cli_context: CliContext) -> ExperimentConfig:
+    print(cli_context)
     run_name_with_ts = f"{cli_context.run_name}-{datetime.now().astimezone().strftime('%Y%m%dT%H%M%S%z')}"
     root_dir = get_root_dir(cli_context.cluster)
     work_dir = get_work_dir(root_dir)
     save_dir = f"{root_dir}/checkpoints/{run_name_with_ts}"
-
-    # TODO: DROP THIS ONCE THIS IS WORKING
-    beaker_launch_config: Optional[BeakerLaunchConfig] = build_launch_config(
-        name=cli_context.run_name,
-        cmd=cli_context.remote_cmd,
-        cluster=cli_context.cluster,
-        root_dir=root_dir,
-        workspace="ai2/olmo-3-microanneals",
-        num_nodes=16,
-        nccl_debug=True,
-        # override priority from the CLI eg `--launch.priority=high`
-    )
 
     tokenizer_config = TokenizerConfig.dolma2()
     model_config = TransformerConfig.olmo2_30M(
@@ -60,6 +47,7 @@ def build_experiment_config(cli_context: CliContext) -> ExperimentConfig:
     source_list = SourceMixtureList.from_yaml(
         os.path.join(os.path.dirname(__file__), "sources.yaml")
     )
+
     source_list.validate()
     dataset_config = NumpyFSLDatasetConfig.from_src_mix(
         src_mix=SourceMixtureDatasetConfig(
@@ -90,7 +78,7 @@ def build_experiment_config(cli_context: CliContext) -> ExperimentConfig:
 
     experiment_config = ExperimentConfig(
         run_name=cli_context.run_name,
-        launch=beaker_launch_config,  # TODO: DROP ONCE WORKING
+        launch=None,
         model=model_config,
         train_module=train_module_config,
         trainer=trainer_config,
@@ -109,11 +97,9 @@ if __name__ == "__main__":
 
     Examples:
         To render the config and exit:
-            python src/scripts/train/OLMo3/OLMo3-7B-midtraining.py dry_run debug_run ai2/augusta
+            python train.py dry_run debug_run local
 
-        To launch a training run on Augusta w/ 8 nodes:
-        python src/scripts/train/OLMo3/OLMo3-7B-midtraining.py launch my_run ai2/augusta \
-            --launch.num_nodes=8 \
-            --launch.priority=high
+        To launch a training run:
+            python train.py train my_run_name local
     """
     main(config_builder=build_experiment_config)
