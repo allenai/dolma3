@@ -1,0 +1,9 @@
+sources:
+  - source_name: sourceA
+    target_ratio: 0.5
+    paths:
+      - https://olmo-data.org/preprocessed/dolma3-0625/v0.1-official/allenai/dolma3-tokenizer/common_crawl/art_and_design/*.npy
+  - source_name: sourceB
+    target_ratio: 0.5
+    paths:
+      - https://olmo-data.org/preprocessed/dolma3-0625/v0.1-official/allenai/dolma3-tokenizer/common_crawl/history/*.npy
