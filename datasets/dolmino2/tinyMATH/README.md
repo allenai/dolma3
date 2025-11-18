@@ -7,6 +7,7 @@ For the TinyMATH datasets we generate new math problems, code to solve them, and
 1. **Problem Generation**: Generate 100 synthetic math problems from each problem in the MATH training dataset
 2. **Code Generation**: Convert new problems to python solutions (PoT)
 3. **Conversational Transformation**: Convert python solutions to natural language discussions
+
 While generating new problems is a critical step in this pipeline, we only include the generated solutions, both in code and conversational formats, in our training data.
 
 ## Source Materials
