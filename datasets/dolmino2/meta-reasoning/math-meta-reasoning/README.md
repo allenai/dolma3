@@ -21,7 +21,7 @@ We begin by identifying structured reasoning capabilities that are critical for 
 
 [Pandalla-math](https://huggingface.co/datasets/pandalla/pandalla-math-dataset-v1.0) was used as our seed dataset due to its comprehensive metadata annotations that provide natural scaffolding for capability-targeted data generation. Each problem includes detailed annotations covering problem classification, difficulty analysis, solution approaches, common pitfalls, and verification methods. These rich annotations serve as natural inputs for our capability-targeted tasks. For example, the "common_pitfalls" field directly informs Math Error Recovery generation, while "solution_approach.steps" provides structure for backward chaining tasks. Our specific usage of these annotations can be found in the task prompts.
 
-To scale beyond Pandalla-math's 2,000 problems, we use o4-mini to automatically generate similar metadata annotations for [DeepScaleR](https://huggingface.co/datasets/agentica-org/DeepScaleR-Preview-Dataset) (40.3K problems) and [OpenMathReasoning](https://huggingface.co/datasets/nvidia/OpenMathReasoning) (127.7K problems) \citep{moshkov2025aimo2}.
+To scale beyond Pandalla-math's 2,000 problems, we use o4-mini to automatically generate similar metadata annotations for [DeepScaleR](https://huggingface.co/datasets/agentica-org/DeepScaleR-Preview-Dataset) (40.3K problems) and [OpenMathReasoning](https://huggingface.co/datasets/nvidia/OpenMathReasoning) (127.7K problems) \citep{moshkov2025aimo2}. Prompt for meta data annotations can be found in `task_prompts/meta_annotations.txt`.
 
 
 #### Large-Scale Data Generation
