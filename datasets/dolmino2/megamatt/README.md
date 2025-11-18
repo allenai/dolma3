@@ -1,7 +1,7 @@
 # MegaMatt Data
 This outlines the steps taken to create the MegaMatt dataset. MegaMatt can be thought of as a more permissively licensed variation on the Megamath-Web-Pro-Max dataset, fom the GAIR team in the [OctoThinker project](https://arxiv.org/pdf/2506.20512). Megamath-Web-Pro-Max leveraged Llama-3.1-70B to generate data, which has a less permissive license. By contrast, for MegaMatt we used Qwen3-32B for all data generation. 
 
-## Overvieww
+## Overview
 This is a simple one-step rewrite of an existing permissively licensed dataset: we simply used Qwen3 to rewrite a subset of CommonCrawl/MegaMath-Web-Pro, adhering to a prompt taken from the GAIR team.
 
 ## Source Materials
