@@ -1,9 +1,9 @@
 # TinyMATH Data
 
-This outlines the steps taken to create the TinyMATH PoT and MIND datasets. Broadly speaking, tinyMATH is a collection of synthetic high-school level mathematics problems, in the spirity of tinyGSM.
+This outlines the steps taken to create the TinyMATH PoT and TinyMATH MIND datasets. Broadly speaking, TinyMATH is a collection of synthetic high-school level mathematics problems, in the spirit of tinyGSM.
 
 ## Overview
-We generate new math problems, code to solve them, and two forms of natural language discussion of each solution. Only the python solutions and natural language solutions are used during training, but we outline the full recipe in three steps:
+For the TinyMATH datasets we generate new math problems, code to solve them, and two forms of natural language discussion of each solution. Only the python solutions and natural language solutions are used during training, but we outline the full recipe in three steps:
 1. **Problem Generation**: Generate 100 synthetic math problems from each problem in the MATH training dataset
 2. **Code Generation**: Convert new problems to python solutions (PoT)
 3. **Conversational Transformation**: Convert python solutions to natural language discussions
