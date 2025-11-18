@@ -5,8 +5,8 @@ This outlines the steps taken to create the TinyMATH PoT and TinyMATH MIND datas
 ## Overview
 For the TinyMATH datasets we generate new math problems, code to solve them, and two forms of natural language discussion of each solution.  Generation of this data proceeds in three steps:
 1. **Problem Generation**: Generate 100 synthetic math problems from each problem in the MATH training dataset
-2. **Code Generation**: Convert new problems to python solutions (PoT)
-3. **Conversational Transformation**: Convert python solutions to natural language discussions
+2. **Code Generation**: Convert new problems to python solutions (TinyMATH PoT)
+3. **Conversational Transformation**: Convert python solutions to natural language discussions (TinyMATH MIND)
 
 While generating new problems is a critical step in this pipeline, we only include the generated solutions, both in code and conversational formats, in our training data.
 
@@ -92,4 +92,4 @@ Convert the context above as a multi-turn problem-solving conversation where par
 
 ## Final Dataset
 - **TinyMATH PoT**: 729,261 python solutions | 241M tokens
-- **TinyMATH MIND:**: 1,413,080 natural language solutions | 899M tokens
+- **TinyMATH MIND**: 1,413,080 natural language solutions | 899M tokens
