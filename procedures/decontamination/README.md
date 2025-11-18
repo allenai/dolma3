@@ -16,7 +16,7 @@ The decontamination process includes the following steps:
 
 3. **Scoring**: Contamination is scored using IDF-weighted n-gram overlap, with adaptive weighting across question (highest priority), answer, and passage components when present.
 
-For instances ≥ 50 tokens (cumulative of question/answer/passage), a perfect question match (IDF overlap score 1.0) alone is sufficient for contamination detection in question-only scenarios. But when answers or passages are present, they serve as supporting evidence of contamination, allowing for more imperfect question matches to still exceed the 0.8 threshold. Below 50 tokens, the system demands increasingly perfect matches as length decreases (reaching 1.0 requirement at ≤20 tokens), making even high-quality matches insufficient without near-perfect alignment of all available components. See [SIMPLE documentation](https://github.com/allenai/decon/blob/main/doc/simple.md) for more details.
+For instances ≥ 50 tokens (cumulative of question/answer/passage), a perfect question match (IDF overlap score 1.0) alone is sufficient for contamination detection in question-only scenarios. But when answers or passages are present, they serve as supporting evidence of contamination, allowing for more imperfect question matches to still exceed the 0.8 threshold. Below 50 tokens, the system demands increasingly perfect matches as length decreases (reaching 1.0 requirement at ≤20 tokens), making even high-quality matches insufficient without near-perfect alignment of all available components. See [SIMPLE documentation](https://github.com/allenai/decon/blob/main/doc/simple-details.md) for more details.
 
 Documents exceeding the contamination threshold are flagged for removal.
 
