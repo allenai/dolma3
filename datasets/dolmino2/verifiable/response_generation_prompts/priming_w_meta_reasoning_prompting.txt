@@ -30,7 +30,7 @@ Your reasoning process might contain one or many strategies including:
 #    Break down the problem into smaller subgoals or steps, and address them sequentially?
 
 
-# User: {prompt}
+# User: {problem}
 
 
 # Show your work in <think> </think> tags. And return the final answer in <answer> </answer> tags.

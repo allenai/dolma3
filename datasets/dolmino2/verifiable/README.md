@@ -3,7 +3,7 @@ This folder contains data documentations of the sources **verifiable-gpt41** and
 
 Program-verifiable tasks are those that can use a (python) program to deterministically verify if an answer to a problem is correct or not. For this dataset we generate program-verifiable problems requiring a wide range of meta-reasoning strategies that are well-suited to be learned during a mid-training phase. We (1) programmatically generated these problems, (2) distilled reasoning traces from strong (reasoning) models (GPT-4.1 and o4-mini-high), and (3) finally filtered those for correctness using an output verifier (Python programs).
 
-#### Question Generation
+#### Problem Generation
 
 We manually curated 350 program-verifiable tasks, where each task consists of the following three components:
 - Task Prompt Template. A natural language prompt format that defines the structure of task instances, with placeholders for instance-specific parameters. Examples of "task prompt templates" can be found in `example_task_templates` folder.
