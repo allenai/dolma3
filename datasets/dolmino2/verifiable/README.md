@@ -10,9 +10,11 @@ We manually curated 350 program-verifiable tasks, where each task consists of th
 - Parameter Generator. A Python program that samples valid instance parameters based on user-defined constraints, such as scale or structure.
 - Output Verifier. A Python program that evaluates the model’s output, checking whether or not the output is correct.
 
+Using these three components, we generate a large-scale set of verifiable problems.
+
 #### Reasoning and Answer Generation
 
-For each generated, we generated reasoning traces along with the final answer using GPT-4.1 and o4-mini with high reasoning level. Reasoning and answers were generated using two prompting methods: *simple prompting* (provided in `response_generation_prompts/simple_prompting.txt`), and *priming with meta reasoning strategies* (provided in `response_generation_prompts/priming_w_meta_reasoning_prompting.txt`).
+For each generated problem, we generated reasoning traces along with the final answer using GPT-4.1 and o4-mini with high reasoning level. Reasoning and answers were generated using two prompting methods: *simple prompting* (provided in `response_generation_prompts/simple_prompting.txt`), and *priming with meta reasoning strategies* (provided in `response_generation_prompts/priming_w_meta_reasoning_prompting.txt`).
 
 Finally, we entirely removed `<think> </think>` tags, and replaced `<answer> </answer>` with just `Answer: …`.
 
