@@ -23,6 +23,8 @@ We then design specific code tasks that target these capabilities, shown in the 
 
 #### Dataset Selection and Generation
 
-For code generation capabilities, we use [APPS](https://huggingface.co/datasets/codeparrot/apps), [TACO](https://huggingface.co/datasets/BAAI/TACO), [OpenCodeReasoning](https://huggingface.co/datasets/nvidia/OpenCodeReasoning), and [tulu-3-sft-personas-code](https://huggingface.co/datasets/allenai/tulu-3-sft-personas-code) to generate data. In particular, APPS and TACO are subsets of OpenCodeReasoning. We use o4-mini to generate comprehensive metadata annotations for these coding datasets. Each problem includes annotations covering problem classification, difficulty analysis, solution approaches, common implementation pitfalls, and code verification methods. We then use these annotations to generate data for each task using GPT-4.1. 
+For code generation capabilities, we use [OpenCodeReasoning](https://huggingface.co/datasets/nvidia/OpenCodeReasoning) and [tulu-3-sft-personas-code](https://huggingface.co/datasets/allenai/tulu-3-sft-personas-code) to generate data. Inspired by the annotation categories in the [Pandalla-math](https://huggingface.co/datasets/pandalla/pandalla-math-dataset-v1.0) dataset (which we use for our math-meta-reasoning source), we first use o4-mini to generate comprehensive metadata annotations, in categories of problem classification, difficulty analysis, solution approaches, common implementation pitfalls, and code verification methods. These annotations are then inserted as supplementary information in the task prompts -- see the task prompts for specific annotation types used by task. Using these prompts, we generate data for each task using GPT-4.1. 
 
 Prompts for each task can be found in `task_prompts` folder.
+
+
