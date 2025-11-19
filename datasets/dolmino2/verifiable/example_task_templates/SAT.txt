@@ -1,0 +1,7 @@
+There are {N} boolean (0/1) values x[0], x[1], ..., x[{N_minus_1}]. Each of the following {M} expressions (`|` means OR, `!` means NOT) must equal 1:
+{expressions}
+
+Please find any solution x[0], x[1], ..., x[{N_minus_1}] that satisfies the conditions above.
+
+Output Format: Your final answer should be a single line containing x[0], x[1], ..., x[{N_minus_1}], separated by spaces.
+Example: 0 1 0 1 1 (do not include quotes or backticks).

@@ -1,0 +1,12 @@
+You are given a **directed graph** with {N} vertices, labeled from `0` to `{N_minus_1}`.
+
+The graph contains the following directed edges. Each edge is represented as a tuple `(s, t, w)`, meaning there is a directed edge **from vertex `s` to vertex `t` with weight `w`**:
+{edges}
+
+Your task is to find a path `p1, p2, ..., pk` such that:
+- The path **visits every vertex at least once** (revisiting vertices is allowed).
+- Your goal is to **minimize the total weight** of the path. The total weight is the sum of the weights of all edges used in the path.
+
+Output Format:
+Your final answer should be a single line containing the path in order: `p1, p2, ..., pk`, separated by **spaces**.
+Example: `0 1 0 2` (do **NOT** include the backticks or quotes); this means the path starts at vertex 0, goes to 1, returns to 0, and then to 2 — thus visiting all three vertices at least once (assuming 3 vertices in total).
