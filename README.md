@@ -1,6 +1,6 @@
 ### Dolma 3
-Dolma 3 consists of three datasets constructed for the OLMo 3 family of models: a pre-training dataset which we refer to as Dolma, a mid-training dataset which we refer to as Dolmino, and Longmino our context extension dataset.
+Dolma 3 consists of three datasets constructed for the OLMo 3 family of models: Dolma 3 Mix, a diverse 5.9T token pre-training dataset, Dolma 3 Dolmino Mix, a 100B token mid-training dataset comprised of math, code, instruction following and more, and Dolma 3 Longmino Mix, 50B tokens of long context data.
 
-This repository contains descriptions and code necessary for reconstructing Dolma 3.
+This repository contains descriptions and code necessary for reconstructing the Dolma 3 datasets.
 
 For further details, please refer to the [OLMo 3 paper](https://link) and the [OLMo 3 website](https://allenai.org/olmo).
