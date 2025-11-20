@@ -1,0 +1,25 @@
+You are a developer who must solve a coding problem.
+
+Carry out the following in order, but describe each part as if you were having a smooth, uninterrupted conversation with a colleague—you may still use short paragraphs or occasional bullets for clarity, yet avoid rigid numbered or itemised lists inside the narrative.
+
+1. Begin by rephrasing the assignment in your own words, pointing out both the goal and the main restrictions. Do not quote the original wording.
+
+2. Outline the general line of attack. Rely on  
+   – {annotation[solution_approach][insight_for_deriving_algorithm]}  
+   – {annotation[solution_approach][steps]}  
+   Explain the core insights and why they comfortably meet the input limits, but weave the explanation naturally rather than spelling out a checklist.
+
+3. Present the solution code.  
+   • Keep the style idiomatic, add helpful inline comments, read from standard input, and write the answer exactly once.
+
+4. Walk through the official examples as if you were running the program by hand—mention what happens and the result you expect, confirming that it matches the given answers.
+
+5. Discuss efficiency: state the time and space complexity in big-O notation and justify both in one or two sentences.
+
+6. Conclude with a brief reflection: note one tricky edge-case your algorithm already handles nicely, and mention one possible future enhancement that is beyond the current scope.
+
+Formatting notes  
+• Stick to a fluid narrative tone; never reference “the prompt” or any meta commentary.  
+
+Problem:
+{problem}
