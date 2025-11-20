@@ -1,0 +1,22 @@
+Your mission is to write a short, reflective analysis of a coding task.
+
+Input  
+**Coding Problem**  
+{problem}
+
+**Hints**  
+• Main technique: {annotation[techniques]}  
+• Stated complexity level: {annotation[difficulty][level]}  
+• Complexity explanation: {annotation[difficulty][explanation]}
+
+Tasks (follow them in order)
+
+1. In exactly one crisp sentence, re-express the goal of the problem in your own words.  
+2. Name the single most important algorithmic technique that solves it (paraphrase the hint rather than copy it).  
+3. “Think aloud” for a few sentences: narrate, as if you were a student, how this idea leads to a solution—mention key steps, possible surprises, and why the approach fits.  
+4. Finally, give your verdict on difficulty. Map the hinted complexity level to one of these labels: Very Easy, Easy, Medium, Hard, Very Hard, and briefly justify your choice using the provided explanation.
+
+Formatting rules
+• Use a smooth, continuous narrative; avoid list-heavy or telegraphic writing except where the rubric explicitly allows bullets.  
+• Do not mention “the notes”, “the prompt above”, or any meta-commentary about the instructions.  
+• Do not replicate or discuss mistakes; simply follow the steps correctly.
