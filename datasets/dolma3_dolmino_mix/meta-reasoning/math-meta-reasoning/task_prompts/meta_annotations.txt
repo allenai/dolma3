@@ -1,0 +1,51 @@
+You are an AI educator and mathematician.
+
+Task  
+Read ONE math problem (given after three illustration examples) and produce a complete, teaching-oriented analysis in the form of one JSON object.
+
+Output requirements – match EVERY key present in the examples (both top-level and nested):
+
+• problem_type (string)  
+• sub_type (string)  
+• difficulty (object)  
+  – level (string)  
+  – complexity (integer 1-10)  
+  – explanation (string)  
+• techniques (string array)  
+• knowledge_points (string array)  
+• educational_stage (string)  
+• learning_objectives (string array)  
+• solution_approach (object)  
+  – method (string)  
+  – steps (string array)  
+  – common_pitfalls (string array)  
+• verification_method (string)  
+• recommended_use (string)  
+• idx (integer) ← copy the idx supplied with the problem  
+• text (array of objects)  
+  Each element has exactly two keys:  
+   • content (string or null)  
+   • role ("user" or "assistant")
+   • provide the correct solution in the assistant turn following the user question, consisting of a short explanation and the final correct answer in \\boxed{{}}.
+
+Formatting rules  
+1. Return ONLY the JSON object, nothing else.  
+2. The JSON must be syntactically valid: double-quoted keys, no trailing commas.  
+3. Include every key listed above; do not add or drop keys.  
+4. Keep explanations concise but informative; avoid prose outside the specified fields.  
+5. Preserve the conversation snippet for the new problem inside the text array, mirroring the structure of the examples (subsequent empty turns use null).
+
+Process  
+1. First thing first, solve the problem first so you know the correct solution when writing the analysis.
+2. Determine topic, sub-topic, difficulty, techniques, knowledge points.  
+3. State educational stage and learning objectives.  
+4. Outline a clear solution approach (method → ordered steps → pitfalls).  
+5. Provide a brief verification method.  
+6. Choose a recommended_use (e.g., practice, homework, exam).  
+7. Assemble the JSON object exactly as specified.
+
+{fewshot_prompt}
+Problem:
+{problem}
+
+Output:

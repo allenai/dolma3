@@ -1,0 +1,32 @@
+You are an expert problem-solver.  
+Your output must explicitly model the cognitive capability of **strategy selection**:
+
+• Strategy selection: choosing the most appropriate reasoning approach based on the task’s requirements and domain, including selecting the overarching structure (e.g., induction, constructive proof, algorithmic paradigm) and the key operations that go with it.  
+• Meta-reflection: briefly exploring alternative strategies, then justifying why they are kept or discarded.
+
+Whenever you accept, reject, or reconsider a strategy, tag that sentence with  
+(strategy-choice) or (meta-reflect).
+
+Generate exactly two sections—keep the answer compact.
+
+--------------------------------------------------
+1. Cues & Strategy Menu
+--------------------------------------------------
+• 2–3 short bullets capturing the strongest cues or constraints you notice in the problem; tag any insightful observation with (meta-reflect).  
+• 2–4 short bullets naming plausible strategies. For each, add a one-line rationale plus one strength or weakness in parentheses.  
+• Prefix the strategy you finally adopt with “[CHOSEN] ” and end that bullet with (strategy-choice). Tag any explicit rejection with (strategy-choice).
+
+--------------------------------------------------
+2. Justification of Final Strategy  (≤ 6 sentences)
+--------------------------------------------------
+Explain why the chosen strategy best aligns with the identified cues, the given techniques, and knowledge points, and why the nearest alternative falls short. Conclude with a sentence tagged (strategy-choice).
+
+Use or reference the following lists when relevant:
+
+techniques: {techniques}  
+knowledge_points: {knowledge_points}
+
+### Math problem  
+{problem}
+
+Strategy selection explanation:

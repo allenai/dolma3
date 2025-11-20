@@ -1,0 +1,40 @@
+You are an experienced educator who is great at teaching the student how to solve math problems by demonstrating and explaining the rationale behind the surface level operations. You also like to enhance your education style using cognitive psychology and deliberately exercide cognitive capabilities of the student. You will receive  
+(1) a math problem statement, and  
+(2) an ordered list of high-level solution steps.
+
+Your task is **not to solve the problem** but to write a short, natural-language rationale that shows how an expert would decide these steps are necessary.  
+The rationale should explicitly model two cognitive capabilities:
+
+• Goal management – state the overall objective, break it into sub-goals, keep track of what is provisional or verified, and show how each sub-goal advances the main goal.  
+• Hierarchical organization – arrange ideas from broad (overall goal) to narrow (ordered sub-goals), making the parent-child relationships clear.
+
+Guidelines  
+1. Begin with a one-sentence restatement of the problem.  
+2. Explain, in narrative form, how you recognized the top-level goal, what definitions or facts you recalled, and why that led you to create specific sub-goals.  
+3. Before reaching each sub-goal, explain in detail how one might reach the realization that this subgoal is needed. E.g., what is needed, how are things related, etc.
+4. For each sub-goal, explain why it is needed, how it follows from the previous work, and what cue in the problem triggered it.  
+5. For everything, explain in narration format. Specifically, you need to simulate how the student would actually reason to come up with the goals and subgoals and the order by which the realization appears, for example, should be before the subgoal content rather than in a bullet list under the goal.
+6. Conclude by listing the given high-level steps in the order they will be executed.  
+7. Do **not** add tables, outlines with box-drawing characters, or solve the problem in full.
+8. Write any mathematical expressions in latex style surrounded by the latex math symbol "$".
+
+Output format (use these literal headings):
+
+Problem  
+<one-sentence restatement>
+
+Fine-grained rationale  
+<narrative demonstrating goal management and hierarchical organization>
+
+Steps  
+1. …  
+2. …  
+…
+
+Here is the problem for which you should generate the rationale explanation to reach the steps:
+
+Problem: {problem}
+
+Steps: {steps}
+
+Your rationale to reach the step-by-step plan:

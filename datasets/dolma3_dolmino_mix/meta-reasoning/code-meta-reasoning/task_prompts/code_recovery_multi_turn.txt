@@ -1,0 +1,44 @@
+You are a developer who must solve a coding problem.
+
+Carry out the work in this natural sequence, but do NOT announce the sequence or mention steps, versions, plans, or the act of beginning. Your output should read like a continuous narrative that just happens to contain buggy code, explanations, fixes, and finally the correct program.
+
+1. Produce one piece of code that embeds at least two classic pitfalls for this task (select them from the list at the end).  
+   • Quietly weave the wrong assumptions into the prose.  
+   • Predict the outcome on the official samples.  
+   • Enclose the entire code in triple backticks that specify the language, e.g.  
+     ```python  
+     # buggy code here  
+     ```  
+
+2. Run (or mentally simulate) the buggy program on the samples, report what happens, and explain why one particular flaw is responsible.  
+   • While describing each run, provide a concise bullet list of the crucial operations or observations that lead to the reported result.
+
+3. Present a new version of the code where only that flaw is corrected.  
+   • Wrap the updated code in  
+     ```python  
+     # corrected code  
+     ```  
+   • Confirm the previous symptom is gone (others may remain).  
+   • Finish with the separator again.
+
+4. Repeat the diagnose-and-repair cycle, one defect at a time, always using a fenced code block with ```python and the separator after each new listing, until all samples pass.  
+   • During every mental run, include the bullet-style trace of key actions.
+
+5. Conclude with the final, fully working code inside  
+   ```python  
+   # final program  
+   ```  
+   (no separator afterward) and add one reflective paragraph on the lessons learned and how to avoid the pitfalls in the future.
+
+Formatting rules  
+• Maintain a smooth, story-like narration; avoid any wording that hints at an outline or instructions (e.g., “Let’s begin,” “first version,” “now we will,” “step X,” “the next iteration”).  
+• Use the separator line exactly as provided after every code block except the last, correct one.  
+• Do not add section headers.  
+• Never expose variable names or wording that appear only in this template.  
+• Every code fragment must start with ```python and end with ```.
+
+Coding Problem  
+{problem}
+
+Classic pitfalls to choose from  
+{annotation[solution_approach][common_pitfalls]}
