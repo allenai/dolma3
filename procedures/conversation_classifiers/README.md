@@ -8,7 +8,7 @@ This is a sample command
 
 ```shell
 uv run \
-  scripts/topic_sft/openai_classifier.py \
+  scripts/conversation_classifier/conversation_classifier.py \
   -d allenai/Wildchat-1M-gpt-4.1-regenerated-english-decontam-v2-filtered-tagged-topic \
   -o allenai/Wildchat-1M-gpt-4.1-regenerated-english-decontam-v2-filtered-tagged-topic-refusal \
   -t refusal
