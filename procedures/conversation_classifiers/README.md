@@ -8,7 +8,7 @@ This is a sample command
 
 ```shell
 uv run \
-  scripts/conversation_classifiers/conversation_classifiers.py \
+  procedures/conversation_classifiers/conversation_classifiers.py \
   -d allenai/Wildchat-1M-gpt-4.1-regenerated-english-decontam-v2-filtered-tagged-topic \
   -o allenai/Wildchat-1M-gpt-4.1-regenerated-english-decontam-v2-filtered-tagged-topic-refusal \
   -t refusal
@@ -48,7 +48,7 @@ export HF_XET_HIGH_PERFORMANCE=1
 uv run --with=huggingface-hub hf download allenai/WildChat-4.8M --repo-type dataset
 
 # do the actual tagging
-uv run scripts/topic_sft/openai_classifier.py \
+uv run procedures/conversation_classifiers/conversation_classifiers.py  \
     --dataset-dir allenai/WildChat-4.8M \
     --output-dir soldni/WildChat-4.8M-topic \
     --batch-size 5000 \
@@ -69,7 +69,7 @@ export HF_XET_HIGH_PERFORMANCE=1
 uv run --with=huggingface-hub hf download lmsys/lmsys-chat-1m --repo-type dataset
 
 # do the actual tagging
-uv run scripts/topic_sft/openai_classifier.py \
+uv run procedures/conversation_classifiers/conversation_classifiers.py  \
     --dataset-dir lmsys/lmsys-chat-1m \
     --output-dir soldni/lmsys-chat-1m-topic \
     --batch-size 5000 \
