@@ -55,6 +55,7 @@ RULES: list[tuple[str, str]] = [
     ("stack-edu/sample-fim-weighted-pl-edu-score",  "stack_edu_fim-*"),
     ("stack-edu/fim/documents",                      "stack_edu_fim-*"),
     ("stackedu-fim-20pct-natural",                   "stack_edu_fim-*"),
+    ("stack-edu-fim/weighted-pl-20B-v0",             "stack_edu_fim-*"),
     ("tokyotech-llm/swallowcode/scor_final_data",    "cranecode"),
     # Math
     ("megamath_web_pro_max",                         "megamatt"),
@@ -82,12 +83,14 @@ RULES: list[tuple[str, str]] = [
                                                      "nemotron-synth-qa"),
     ("tulu-3-sft-for-olmo-3-midtraining",            "tulu-3-sft"),
     ("tulu_flan/v1-FULLDECON-HARD-TRAIN-60M",        "dolmino_1-flan"),
-    ("reddit-rewrites/densesub_highthresh",          "reddit_to_flashcards"),
-    ("reddit-rewrites/densesub_lowthresh",           "reddit_to_flashcards"),
+    ("densesub_highthresh",                          "reddit_to_flashcards"),
+    ("densesub_lowthresh",                           "reddit_to_flashcards"),
     ("wiki_psgqa_rewrites/psgqa_rewrites_v1",        "wiki_to_rcqa-part{1,2,3}"),
     # STEM-heavy crawl (sponge eli5)
     ("sponge_63_mixes/eli5_60pct_filter",            "stem-heavy-crawl"),
     ("sponge/sponge_63_mixes/eli5_60%_decon_final",  "stem-heavy-crawl"),
+    # External datasets (not part of allenai/dolma3_dolmino_pool)
+    ("finemath/finemath-3plus",                      "hf://datasets/HuggingFaceTB/finemath/finemath-3plus"),
 ]
 
 PDF_RE = re.compile(
@@ -99,7 +102,7 @@ WEB_RE = re.compile(
     r"vigintile_(?P<vig>\d{4})_subset(?:-decon)?(?:-2)?/(?P<topic>[^/]+)/"
 )
 
-S3_PATH_RE = re.compile(r"s3://[^\s'\"#]+")
+S3_PATH_RE = re.compile(r"(?:s3|gs)://[^\s'\"#]+")
 
 
 @dataclass
@@ -108,11 +111,20 @@ class Mapping:
     note: str = ""
 
     def hf_uri(self) -> str | None:
-        return f"{HF_URI_BASE}/{self.folder}" if self.folder else None
+        if not self.folder:
+            return None
+        if self.folder.startswith("hf://"):
+            return self.folder
+        return f"{HF_URI_BASE}/{self.folder}"
 
     def hf_url(self) -> str | None:
         if not self.folder:
             return None
+        if self.folder.startswith("hf://"):
+            tail = self.folder[len("hf://datasets/"):]
+            owner, name, *sub = tail.split("/", 2)
+            subpath = f"/{sub[0]}" if sub else ""
+            return f"https://huggingface.co/datasets/{owner}/{name}/tree/main{subpath}"
         if "*" in self.folder or "{" in self.folder:
             return f"https://huggingface.co/datasets/{HF_REPO}/tree/main/data"
         return f"{HF_WEB_BASE}/{self.folder}"
@@ -120,6 +132,8 @@ class Mapping:
 
 def translate(s3_path: str) -> Mapping:
     p = s3_path.strip()
+    if p.startswith("gs://"):
+        p = "s3://" + p[5:]
 
     m = PDF_RE.search(p)
     if m:
@@ -229,6 +243,7 @@ def dump_all(yaml_glob: str, out_path: str) -> int:
     for f in files:
         with open(f) as fh:
             paths.update(extract_s3_paths(fh.read()))
+    _corpus()  # warm the cache before we truncate out_path (may be DEFAULT_TSV)
     with open(out_path, "w") as out:
         out.write("s3_path\thf_uri\thf_url\tnote\n")
         for s3 in sorted(paths):

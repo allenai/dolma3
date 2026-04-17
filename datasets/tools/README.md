@@ -10,10 +10,13 @@ Useful if you want to replicate or inspect the data referenced by the
 configs under [`datasets/configs/midtraining/`](../configs/midtraining/)
 but don't have access to the internal S3 bucket.
 
+Works on `s3://` and `gs://` paths alike — earlier YAML rounds reference
+the same bucket on GCS and the path keys are identical.
+
 ### Usage
 
 ```bash
-# Single path
+# Single path (s3:// or gs://)
 python s3_to_hf.py s3://ai2-llm/preprocessed/.../*.npy
 
 # Just the clickable URL
